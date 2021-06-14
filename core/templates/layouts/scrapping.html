@@ -1,0 +1,58 @@
+{% extends 'layouts/base.html' %} 
+{% load static %}
+
+
+ {% block content %}
+<div class="container h-100">
+<h1 class="textoregistro mt-4 text-center">Recolectar links de likendin </h1>
+    <div class="alinear">
+    
+        <div class="col-10 col-md-8 col-lg-6">
+            
+            <!-- Form -->
+            <form class="form-example" action="" method="POST">
+                {% csrf_token %}
+
+                <!-- Input fields -->
+                <div class="form-group mt-3 scrap">
+                    {{scraping}}
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-customized">Recolectar</button>
+                <!-- End input fields -->
+            </form>
+            <!-- Form end -->
+        </div>
+    </div>
+</div>
+
+
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+
+
+
+{% endblock %}
+
+<script src="{% static '/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static '/js/jquery-migrate-3.0.0.min.js' %}"></script>
+<script src="{% static '/js/jquery.backstretch.min.js' %}"></script>
+<script src="{% static '/js/scripts.js' %}"></script>

@@ -1,0 +1,82 @@
+{% extends 'layouts/base.html' %} {% block content %} {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+</ul>
+{% endif %}
+
+
+<div class="container h-100">
+    <h1 class="textoregistro mt-4 text-center">Visitar a gente en likendin </h1>
+    <div class="alinear">
+        <div class="col-10 col-md-8 col-lg-6">
+            <!-- Form -->
+            <form class="form-example" action="" method="POST">
+                {% csrf_token %}
+                <!-- Input fields -->
+                <div class="form-group mt-3 scrap">
+                    {{visited}}
+                </div>
+                <button type="submit" class="btn btn-primary btn-customized">&nbsp; Visitar&nbsp; </button>
+                <!-- End input fields -->
+            </form>
+            <!-- Form end -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+<li>&nbsp;
+</li>
+
+{% endblock %}

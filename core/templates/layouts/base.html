@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% block title %}{% endblock title %}
+    <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}?{% now 'U' %}">
+    <script src="https://use.fontawesome.com/1a90f730b9.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <nav class="menu ">
+            <ul>
+                <h2 class="logoheader ">Auto likendin V8</h2>
+                {% if request.user.is_authenticated %}
+                <li>Bienvenido {{request.user}}</li>
+                <li>
+                    <a href="{% url 'core:home' %} ">Home</a>
+                </li>
+                <li><a href=" {% url 'core:recolectar' %} ">Recolectar Información</a></li>
+                <li><a href="{% url 'core:busqueda' %} ">Conectar</a></li>
+                <li><a href="{% url 'core:visitar' %} ">Visitar</a></li>
+                <li><a href="{% url 'core:logout' %} ">Logout</a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+    </div>
+
+
+    </div>
+
+
+    {% block content %} {% endblock %} {% include "layouts/footer.html" %}
+
+</body>
+
+</html>
